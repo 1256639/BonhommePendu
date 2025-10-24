@@ -18,7 +18,13 @@ namespace BonhommePendu.Events
             Index = index;
             Letter = gameData.RevealLetter(index);
 
-            
+            if (gameData.HasGuessedTheWord)
+            {
+                Events = new List<GameEvent>
+                {
+                    new WinEvent(gameData)
+                };
+            }
         }
     }
 }

@@ -14,8 +14,6 @@ namespace BonhommePendu.Events
 
             Events.Add(new GuessedLetterEvent(gameData, letter));
 
-            Events.Add(new WrongGuessEvent(gameData));
-
             bool foundAtLeastOneLetter = false;
 
             for (int i = 0; i < gameData.RevealedWord.Length; i++)
